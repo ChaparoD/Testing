@@ -1,0 +1,7 @@
+Metadata-Version: 2.1
+Name: testing-data-unholster
+Version: 0.1
+Summary: first public host
+Author-email: Daniel Chaparro <daniel.chaparro@unholster.com>
+License: MIT
+Requires-Python: >=3.9
