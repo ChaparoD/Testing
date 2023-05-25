@@ -1,0 +1,20 @@
+[tool.pdm]
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "", email = ""},
+]
+dependencies = [
+    "jinja2>=3.1.2",
+    "markupsafe>=2.1.2",
+    "sphinx-autobuild>=2021.3.14",
+    "sphinx==5.0.2",
+    "docutils==0.18",
+    "myst-parser>=1.0.0",
+    "furo>=2023.3.27",
+]
+requires-python = ">=3.9"
+license = {text = "MIT"}

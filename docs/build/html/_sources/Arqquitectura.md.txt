@@ -1,0 +1,3 @@
+# Arquitectura
+
+En esta ventana, se definiran las herramientas utilizadas por el sistema de unholster para proveer datos

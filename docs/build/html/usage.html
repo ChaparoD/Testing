@@ -1,0 +1,378 @@
+<!doctype html>
+<html class="no-js" lang="spanish">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+<link rel="index" title="Índice" href="genindex.html" /><link rel="search" title="Búsqueda" href="search.html" /><link rel="next" title="Keep it Simple" href="testing.html" /><link rel="prev" title="Documentación Data-Unholster" href="index.html" />
+
+    <!-- Generated with Sphinx 5.1.1 and Furo 2023.03.27 -->
+        <title>Instalación</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=fad236701ea90a88636c2a8c73b44ae642ed2a53" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-half" viewBox="0 0 24 24">
+    <title>Auto light/dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-shadow">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <circle cx="12" cy="12" r="9" />
+      <path d="M13 12h5" />
+      <path d="M13 15h4" />
+      <path d="M13 18h1" />
+      <path d="M13 9h4" />
+      <path d="M13 6h1" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation">
+  <div class="visually-hidden">Hide navigation sidebar</div>
+</label>
+<label class="overlay toc-overlay" for="__toc">
+  <div class="visually-hidden">Hide table of contents sidebar</div>
+</label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <div class="visually-hidden">Toggle site navigation sidebar</div>
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand"></div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle">
+          <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+          <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <div class="visually-hidden">Toggle table of contents sidebar</div>
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand centered" href="index.html">
+  
+  <div class="sidebar-logo-container">
+    <img class="sidebar-logo" src="_static/unholster-logo.png" alt="Logo"/>
+  </div>
+  
+  <span class="sidebar-brand-text"></span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Búsqueda" name="q" aria-label="Búsqueda">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Instalación</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="testing.html">Keep it Simple</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="levelDown.html">testing leves</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="testing.html#item-1">Item 1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Sistema.html">Sistema</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Diccionario.html">Diccionario</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle">
+              <div class="visually-hidden">Toggle Light / Dark / Auto color theme</div>
+              <svg class="theme-icon-when-auto"><use href="#svg-sun-half"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <div class="visually-hidden">Toggle table of contents sidebar</div>
+            <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+          </label>
+        </div>
+        <article role="main">
+          <section id="instalacion">
+<h1>Instalación<a class="headerlink" href="#instalacion" title="Enlace permanente a este encabezado">#</a></h1>
+<p>Seguir los pasos para el correcto funcionamiento del Proyecto Mallas Unholster</p>
+<section id="graphlab">
+<h2>graphlab<a class="headerlink" href="#graphlab" title="Enlace permanente a este encabezado">#</a></h2>
+<p><a class="reference external" href="https://app.codeship.com/projects/353121"><img alt="Codeship Status for Unholster/graphlab" src="https://app.codeship.com/projects/17670f70-83de-0137-d222-26088eb6bdf6/status?branch=master" /></a></p>
+<ol class="arabic simple">
+<li><p>Instalar python <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">python&#64;3.7</span></code></p>
+<ol class="arabic simple">
+<li><p>Instalar postgresql <code class="docutils literal notranslate"><span class="pre">brew</span> <span class="pre">install</span> <span class="pre">postgresql</span></code></p></li>
+</ol>
+</li>
+<li><p>QueryAPI</p>
+<ol class="arabic simple">
+<li><p>Acceder a directorio de QueryAPI <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">back/QueryAPI</span></code></p></li>
+<li><p>Instalar paquete <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">install</span></code></p>
+<ul class="simple">
+<li><p>Error instalando psycopg2 or &quot;/usr/bin/clang failed with exit code 1&quot;:</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">pip3.7</span> <span class="pre">install</span> <span class="pre">psycopg2-binary</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pip3.7</span> <span class="pre">install</span> <span class="pre">libpq</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.zshrc</span></code>  copiar y pegar cada una de las siguientes lineas:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">LDFLAGS=&quot;-L/usr/local/opt/openssl&#64;3/lib</span> <span class="pre">-L/usr/local/opt/libpq/lib&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">CPPFLAGS=&quot;-I/usr/local/opt/openssl&#64;3/include</span> <span class="pre">-I/usr/local/opt/libpq/include&quot;</span></code></p></li>
+<li><p>Guardar y salir.</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Crear .env a partir de .env.example</p></li>
+<li><p>Levantar contenedor de neo4J en ubuntu <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">build</span> <span class="pre">-t</span> <span class="pre">neo4j:3.5.8-ubuntu</span> <span class="pre">-f</span> <span class="pre">Dockerfile.neo4j</span> <span class="pre">.</span></code></p></li>
+<li><p>Iniciar contenedores docker con postgres y neo4j <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">-f</span> <span class="pre">docker-compose.yml</span> <span class="pre">up</span> <span class="pre">-d</span></code></p></li>
+<li><p>Crear super usuario <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">createsuperuser</span></code>. Guardar credenciales para iniciar sesión posteriormente.</p></li>
+<li><p>Correr migraciones <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">makemigrations</span></code> y luego <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">migrate</span></code></p></li>
+<li><p>Cargar queries iniciales <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">loaddata</span> <span class="pre">groups</span> <span class="pre">queries</span></code></p></li>
+<li><p>Iniciar servidor <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></code></p></li>
+</ol>
+</li>
+<li><p>ExecutionAPI</p>
+<ol class="arabic simple">
+<li><p>Acceder a directorio de ExecutionAPI <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">back/ExecutionAPI</span></code></p></li>
+<li><p>Crear .env a partir de .env.example</p></li>
+<li><p>Instalar paquetes <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">install</span></code></p></li>
+<li><p>Iniciar servidor <code class="docutils literal notranslate"><span class="pre">pdm</span> <span class="pre">run</span> <span class="pre">adev</span> <span class="pre">runserver</span> <span class="pre">-p</span> <span class="pre">7788</span></code></p></li>
+</ol>
+</li>
+<li><p>Inicializar Frontend</p>
+<ol class="arabic simple">
+<li><p>Acceder a directorio de Frontend <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">front/</span></code></p></li>
+<li><p>Instalar paquetes <code class="docutils literal notranslate"><span class="pre">nvm</span> <span class="pre">use</span> <span class="pre">16.14</span> <span class="pre">&amp;&amp;</span> <span class="pre">yarn</span> <span class="pre">install</span></code></p>
+<ul class="simple">
+<li><p>En caso de error reconociendo la instalacion del comando nvm</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.zshrc</span></code>  Copiar y pegar cada una de las siguientes lineas:</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">NVM_DIR=&quot;$HOME/.nvm&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">-s</span> <span class="pre">&quot;/usr/local/opt/nvm/nvm.sh&quot;</span> <span class="pre">]</span> <span class="pre">&amp;&amp;</span> <span class="pre">\.</span> <span class="pre">&quot;/usr/local/opt/nvm/nvm.sh&quot;</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">-s</span> <span class="pre">&quot;/usr/local/opt/nvm/etc/bash_completion.d/nvm&quot;</span> <span class="pre">]</span> <span class="pre">&amp;&amp;</span> <span class="pre">\.</span> <span class="pre">&quot;/usr/local/opt/nvm/etc/bash_completion.d/nvm&quot;</span></code></p></li>
+<li><p>Guardar y salir.</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>Crear .env a partir de .env.example</p></li>
+<li><p>Exportar token de Gemfury <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">GEMFURY_TOKEN=qwerty</span></code> en .env o en <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.zshrc</span></code> de manera local.</p></li>
+<li><p>Iniciar el frontend <code class="docutils literal notranslate"><span class="pre">nvm</span> <span class="pre">use</span> <span class="pre">16.14</span> <span class="pre">&amp;&amp;</span> <span class="pre">yarn</span> <span class="pre">start</span></code></p></li>
+</ol>
+</li>
+<li><p>Acceso a Neo4j de docker</p>
+<ol class="arabic simple">
+<li><p>Para conectarse a neo4j <code class="docutils literal notranslate"><span class="pre">Entrar</span> <span class="pre">a</span> <span class="pre">localhost:7474/browser/</span></code></p></li>
+<li><p>Para detener neo4j en el contenedor de neo4j-ubuntu <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">exec</span> <span class="pre">neo4j-ubuntu</span> <span class="pre">bash</span></code> ó <code class="docutils literal notranslate"><span class="pre">supervisorctl</span> <span class="pre">stop</span> <span class="pre">neo4j</span></code></p></li>
+<li><p>Si se va a usar la conexión de Neo4j <code class="docutils literal notranslate"><span class="pre">ds-prototipos</span></code></p>
+<ol class="arabic simple">
+<li><p>Correr <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">ps</span></code> para encontrar la id del contenedor <code class="docutils literal notranslate"><span class="pre">neo4j:3.5.8-ubuntu</span></code></p></li>
+<li><p>Detener el contenedor <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">stop</span> <span class="pre">&lt;container_id&gt;</span></code> o utilizar dashboard de docker.</p></li>
+<li><p>Conexión por ssh a <code class="docutils literal notranslate"><span class="pre">ds-prototipos</span></code></p>
+<ol class="arabic simple">
+<li><p>solicitar el acceso a maquina ubuntu a mantención, compartiendo tu clave ssh pública <code class="docutils literal notranslate"><span class="pre">id_rsa.pub</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.ssh/config</span></code> copiar y pegar las siguientes lines (respetar indentación):</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">Host</span> <span class="pre">ds-prototipos</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">HostName</span> <span class="pre">44.203.21.189</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">User</span> <span class="pre">ubuntu</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">IdentityFile</span> <span class="pre">~/.ssh/id_ed25519</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">LocalForward</span> <span class="pre">8081</span> <span class="pre">localhost:8080</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">LocalForward</span> <span class="pre">7474</span> <span class="pre">localhost:7474</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">LocalForward</span> <span class="pre">7473</span> <span class="pre">localhost:7473</span></code></p></li>
+<li><p><code class="docutils literal notranslate">&#160;&#160;&#160; <span class="pre">LocalForward</span> <span class="pre">7687</span> <span class="pre">localhost:7687</span></code></p></li>
+</ol>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">ds-prototipos</span></code> para conexión total.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">-N</span> <span class="pre">ds-prototipos</span></code> para conexión solamente a puertos.</p></li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="testing.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Keep it Simple</div>
+              </div>
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2023, Unholster
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Instalación</a><ul>
+<li><a class="reference internal" href="#graphlab">graphlab</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/scripts/furo.js"></script>
+    </body>
+</html>

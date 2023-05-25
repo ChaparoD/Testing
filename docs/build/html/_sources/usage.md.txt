@@ -1,0 +1,8 @@
+# Instalación
+Seguir los pasos para el correcto funcionamiento del Proyecto Mallas Unholster
+
+
+
+```{include} ../../README.md
+```
+
