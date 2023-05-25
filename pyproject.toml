@@ -1,11 +1,11 @@
 [tool.pdm]
 
 [project]
-name = ""
-version = ""
-description = ""
+name = "testing_data_unholster"
+version = "0.01"
+description = "first public host"
 authors = [
-    {name = "", email = ""},
+    {name = "Daniel", email = "Chaparro"},
 ]
 dependencies = [
     "jinja2>=3.1.2",
