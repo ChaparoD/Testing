@@ -5,7 +5,7 @@ name = "testing_data_unholster"
 version = "0.01"
 description = "first public host"
 authors = [
-    {name = "Daniel", email = "Chaparro"},
+    {name = "Daniel Chaparro", email = "daniel.chaparro@unholster.com"},
 ]
 dependencies = [
     "jinja2>=3.1.2",
